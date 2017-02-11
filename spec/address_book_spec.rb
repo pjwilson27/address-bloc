@@ -103,6 +103,29 @@
        entry_five = book.entries[4]
        check_entry(entry_five, "Sussie", "555-555-2036","sussie@blocmail.com")
      end
+ end
+    describe "importing from entries_2.csv" do
+       it "imports the correct number of entries" do
+           book.import_from_csv("entries_2.csv")
+           book_size = book.entries.size
+           
+           expect(book_size).to eq 3
+       end
+     it "imports the 6th entry" do
+         book.import_from_csv("entries_2.csv")
+         entry_six = book.entries[0]
+         check_entry(entry_six,"Phil", "845-323-1326","pjwilson27@gmail.com")
+   end
+   it "imports the 7th entry" do
+       book.import_from_csv("entries_2.csv")
+       entry_seven = book.entries[1]
+       check_entry(entry_seven,"Titan", "614-818-4053", "dog@woof.com")
+   end
+   it "imports the 8th entry" do
+       book.import_from_csv("entries_2.csv")
+       entry_eight = book.entries[2]
+       check_entry(entry_eight,"Sadie", "614-289-3002", "bark@woof.com")
+   end
    end
    
  end
