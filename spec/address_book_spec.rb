@@ -143,7 +143,7 @@
            book.import_from_csv("entries.csv")
            entry = book.binary_search("Bob")
            expect(entry).to be_a Entry
-           check_entry(entry,"Bob", "555-555-5415", "bob@blocmail.cin")
+           check_entry(entry,"Bob", "555-555-5415", "bob@blocmail.com")
        end
        it "searches AddressBook for Joe" do
            book.import_from_csv("entries.csv")
@@ -185,7 +185,7 @@
            book.import_from_csv("entries.csv")
            entry = book.iterative_search("Bob")
            expect(entry).to be_a Entry
-           check_entry(entry,"Bob", "555-555-5415", "bob@blocmail.cin")
+           check_entry(entry,"Bob", "555-555-5415", "bob@blocmail.com")
         end
         it "searches AddressBook for Joe" do
            book.import_from_csv("entries.csv")

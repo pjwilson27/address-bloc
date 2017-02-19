@@ -61,7 +61,7 @@
       if name == mid_name
         return entries[mid]
       elsif name < mid_name
-        upper = mid + 1
+        upper = mid - 1
       elsif name > mid_name
         lower = mid + 1
       end
