@@ -42,7 +42,14 @@
             expect(book.entries.first.name).to eq("Bobby Boucher")
         end
         end
-
+    describe "#nuke" do
+        it "deletes all of the entries in addressbook" do
+            book.add_entry('Bobby Boucher', '614.123.5555', 'boosh@waterboy.com')
+            
+            book.nuke
+            expect(book.entries.size).to eq (0)
+        end
+    end
 
    describe "#add_entry" do
      it "adds only one entry to the address book" do

@@ -17,6 +17,7 @@ class MenuController
         puts "4 - Import entries from CSV"
         puts "5 - View Entry by number"
         puts "6 - Exit"
+        puts "9 - Delete ALL entries"
         print "Enter your selection: "
         
         #3
@@ -49,6 +50,11 @@ class MenuController
             puts "Good-bye!"
         #8
             exit(0)
+        when 9
+            system "clear"
+            nuke
+            puts "Everything has been deleted. Good job, guy."
+            main_menu
         #9
         else
             system "clear"
